@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Samuel Jaspe | WDD131 Web Development</title>
+  <meta name="description" content="Responsive course home page featuring profile information, student photo, and interactive web certificate course listings with filters." />
+  <meta name="author" content="Samuel Jaspe" />
+  <link rel="canonical" href="https://example.com/" />
+
+  <!-- Favicon (optional: replace with your actual small SVG/PNG ≤ 32x32) -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" media="(min-width: 48rem)" />
+
+  <!-- JavaScript -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="Scripts/date.js" defer></script>
+  <script src="Scripts/course.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <!-- Accessible inline SVG logo -->
+      <a class="logo-link" href="index.html" aria-label="Course Portal home">
+        <svg class="logo" width="40" height="40" viewBox="0 0 64 64" role="img" aria-labelledby="logoTitle logoDesc" focusable="false">
+          <title id="logoTitle">Course Portal Logo</title>
+          <desc id="logoDesc">Stylized hexagon with checkmark</desc>
+          <defs>
+            <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#3b82f6" />
+              <stop offset="100%" stop-color="#0ea5e9" />
+            </linearGradient>
+          </defs>
+          <path d="M32 2l26 15v30L32 62 6 47V17L32 2z" fill="url(#g)" />
+          <path d="M23 33l6 6 12-14" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <span class="site-name">Samuel Jaspe - WDD131 </span>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button id="menuButton"
+            class="menu-button"
+            aria-label="Open main menu"
+            aria-controls="primaryNav"
+            aria-expanded="false">
+      <span class="menu-icon" aria-hidden="true"></span>
+    </button>
+
+    <nav id="siteNav" class="site-nav" aria-label="Primary">
+      <ul id="primaryNav" class="nav-list">
+        <li class="nav-item"><a class="nav-link current" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="chamber.html">Chamber</a></li>
+        <li class="nav-item"><a class="nav-link" href="final.html">Final</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <h1>Home</h1>
+
+    <!-- About Me -->
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <div class="panel">
+        <p>
+          Welcome! I am Samuel Jaspe, a dedicated student of web development student with a passion for creating online experiences. 
+          My journey into the world of web development began with a curiosity about how websites are built and function. 
+          Over time, this curiosity has blossomed into a full-fledged passion, driving me to learn and grow in this exciting field. 
+          I look forward to sharing my progress and insights with you on this homepage!
+        </p>
+        <p>
+          Outside of work I enjoy exploring UI systems, improving Core Web Vitals, and building with clean,
+          semantic HTML as the foundation.
+        </p>
+      </div>
+    </section>
+
+    <!-- Student Photo -->
+    <section id="photo" aria-labelledby="photo-heading">
+      <h2 id="photo-heading">Student Photo</h2>
+      <figure class="profile-figure">
+        <!-- Replace with your optimized image (≤125 kB). Width/height help prevent layout shift. -->
+        <img
+          src="images/samuel-profile.jpg"
+          width="480"
+          height="480"
+          alt="Portrait of Samuel Alejandro Jaspe Grismán"
+          loading="lazy"
+          decoding="async" />
+        <figcaption>Samuel Alejandro Jaspe Grismán</figcaption>
+      </figure>
+    </section>
+
+    <!-- Courses (dynamic content will be rendered by scripts/course.js) -->
+    <section id="courses" aria-labelledby="courses-heading">
+      <h2 id="courses-heading">Web Certificate Courses</h2>
+
+      <!-- Filter controls -->
+      <div class="filters" role="group" aria-label="Course filters">
+        <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="filter-btn" data-filter="cse">CSE</button>
+        <button type="button" class="filter-btn" data-filter="wdd">WDD</button>
+      </div>
+
+      <!-- Dynamic course cards will be injected here -->
+      <div id="courseGrid" class="course-grid" aria-live="polite"></div>
+
+      <!-- Dynamic credits summary -->
+      <p id="creditTotal" class="credit-total" aria-live="polite">
+        The total credits for courses listed above is <strong>0</strong>.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav aria-label="Social media">
+      <ul class="social-list">
+        <li><a class="social-link" href="https://github.com/sammygoeshard/wdd231" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a></li>
+        <li><a class="social-link" href="https://www.linkedin.com/in/samuel-jaspe-2a2a96375?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a></li>
+        <li><a class="social-link" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a></li>
+        <li><a class="social-link" href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)">X</a></li>
+      </ul>
+    </nav>
+
+    <p class="legal">
+      &copy; <span id="currentyear"></span> • <span class="owner">Samuel Alejandro Jaspe Grismán</span> • Venezuela
+    </p>
+    <p id="lastModified" class="last-modified" aria-label="Page last modified date"></p>
+  </footer>
+</body>
+</html>
+``

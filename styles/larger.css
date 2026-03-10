@@ -1,0 +1,95 @@
+/* Larger screen enhancements */
+@media (min-width: 48rem) {
+  /* Header becomes a single-row bar with inline nav */
+  .site-header {
+    grid-template-columns: auto 1fr auto; /* brand | spacer | menu (hidden) / nav (shown) */
+    align-items: center;
+  }
+
+  /* Show the nav horizontally and keep it always visible */
+  .menu-button { display: none; }
+
+  .site-nav {
+    display: block !important;
+    background: transparent;
+    box-shadow: none;
+    align-self: end;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: .25rem;
+  }
+
+  .nav-item a {
+    border: 0;
+    color: #fff;
+    background: var(--nav-bg);
+    border-radius: var(--radius-sm);
+    padding: .625rem .9rem;
+  }
+
+  .nav-item a:hover,
+  .nav-item a:focus-visible {
+    background: var(--nav-hover);
+  }
+
+  .nav-item a[aria-current="page"],
+  .nav-item a.active {
+    background: var(--accent-strong);
+  }
+
+  /* Layout: About + Photo side by side to mirror wireframe */
+  #about,
+  #photo {
+    margin-block: 1.25rem;
+  }
+
+  /* Use a two-column grid for the first two sections */
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* wider About, narrower Photo */
+    gap: 1rem;
+  }
+
+  h1 {
+    grid-column: 1 / -1;
+    margin-bottom: .5rem;
+  }
+
+  #about { grid-column: 1; }
+  #photo { grid-column: 2; }
+
+  /* Courses spans full width beneath */
+  #courses {
+    grid-column: 1 / -1;
+    margin-top: .5rem;
+  }
+
+  .filters {
+    grid-template-columns: repeat(3, max-content);
+    justify-content: center;
+    gap: .75rem;
+  }
+
+  .filter-btn { padding-inline: 1rem; }
+
+  .course-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: .75rem;
+  }
+}
+
+/* Even wider layouts—make course cards 3 columns and slightly increase gaps */
+@media (min-width: 64rem) {
+  .course-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  main {
+    gap: 1.25rem;
+  }
+
+  .nav-list { gap: .5rem; }
+}
