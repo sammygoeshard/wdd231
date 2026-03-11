@@ -16,7 +16,7 @@ const courses = [
     description:
       'This course will introduce students to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.',
     technology: ['Python'],
-    completed: true // ✅ you completed this
+    completed: true 
   },
   {
     subject: 'WDD',
