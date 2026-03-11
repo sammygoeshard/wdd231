@@ -82,8 +82,8 @@ const state = {
   filter: 'all' // 'all' | 'cse' | 'wdd'
 };
 
-const $ = (sel, ctx = document) => ctx.querySelector(sel);
-const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
+const qs  = (sel, ctx = document) => ctx.querySelector(sel);
+const qsa = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 
 function formatCourseCode(course) {
   return `${course.subject} ${course.number}`;
@@ -99,8 +99,8 @@ function bySubject(filter) {
    Rendering
    ========================= */
 function renderCourses(list) {
-  const grid = $('#courseGrid');
-  const totalEl = $('#creditTotal');
+  const grid = qs('#courseGrid');
+  const totalEl = qs('#creditTotal');
 
   if (!grid || !totalEl) return;
 
@@ -162,7 +162,7 @@ function setFilter(filter) {
 }
 
 function updatePressedButtons(active) {
-  $$('.filter-btn').forEach((btn) => {
+  qsa('.filter-btn').forEach((btn) => {
     const isActive = btn.dataset.filter === active;
     btn.setAttribute('aria-pressed', String(isActive));
   });
@@ -173,7 +173,7 @@ function updatePressedButtons(active) {
    ========================= */
 function initCoursesUI() {
   // Wire up filter buttons
-  $$('.filter-btn').forEach((btn) => {
+  qsa('.filter-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
       const filter = btn.dataset.filter || 'all';
       setFilter(filter);
