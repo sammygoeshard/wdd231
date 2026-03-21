@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Apure Chamber of Commerce | Member Directory</title> <!-- TODO: customize -->
+  <meta name="description" content="Explore local businesses in the San Fernando Chamber of Commerce directory." />
+  <meta name="author" content="Samuel Alejandro Jaspe Grismán" />
+
+  <!-- Favicon (required) -->
+  <link rel="icon" href="./images/favicon.ico" sizes="any" />
+
+  <!-- Open Graph (Facebook) -->
+  <meta property="og:title" content="San Fernando Chamber | Member Directory" />
+  <meta property="og:description" content="Browse and connect with trusted local businesses in San Fernando." />
+  <meta property="og:image" content="https://your-username.github.io/wdd231/chamber/images/og-directory.jpg" /> <!-- TODO -->
+  <meta property="og:url" content="https://your-username.github.io/wdd231/chamber/directory.html" />           <!-- TODO -->
+
+  <!-- CSS: normalize/reset first, then small, then larger (spec requirement) -->
+  <link rel="stylesheet" href="./styles/normalize.css" />
+  <link rel="stylesheet" href="./styles/small.css" />
+  <link rel="stylesheet" href="./styles/larger.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="branding">
+      <img class="logo" src="images/Icons/acc-logo.svg" alt="Apure Chamber of Commerce logo" /> <!-- TODO: replace -->
+      <div class="titles">
+        <p class="site-eyebrow">Apure Chamber of Commerce</p>
+        <h1 class="site-title">Members Directory</h1> <!-- TODO -->
+      </div>
+    </div>
+
+    <!-- Your nav toggle (navigation.js requires this exact id) -->
+    <button id="menuButton" class="nav-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open main menu">☰</button>
+
+    <!-- Wrap nav for outside-click detection (navigation.js uses #siteNav) -->
+    <div id="siteNav">
+      <nav id="primaryNav" class="site-nav" aria-label="Primary">
+        <ul>
+          <!-- TODO: align with your site plan pages -->
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./directory.html">Directory</a></li>
+          <li><a href="./join.html">Join</a></li>
+          <li><a href="./discover.html">Discover</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+  </header>
+
+  <main id="main">
+    <header class="page-header">
+      <h2>Member Directory</h2>
+      <p class="lede">Browse local businesses and organizations in our chamber.</p>
+    </header>
+
+    <!-- View controls -->
+    <section class="view-controls" aria-label="View options">
+      <button id="gridBtn" type="button" class="view-btn" aria-pressed="true">Grid</button>
+      <button id="listBtn" type="button" class="view-btn" aria-pressed="false">List</button>
+    </section>
+
+    <!-- Members container (populated by js/directory.js via fetch + async/await) -->
+    <section id="members" class="cards" aria-live="polite">
+      <p class="loading">Loading members…</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-grid">
+    <!-- Left: contact -->
+    <section class="footer-col contact">
+      <h3 class="footer-heading">San Fernando de Apure Chamber of Commerce</h3> <!-- TODO: city/region -->
+      <address class="vcard">
+        <span class="org">San Fernando de Apure Chamber of Commerce</span><br />
+        <span class="adr">
+          10 Rue De La Paz<br />
+          San Fernando de Apure <br />
+        </span><br />
+        mailto:info@yourcitychamber.orginfo@yourcitychamber.org</a><br />
+        tel:+1582475552300(223) 555‑2300</a>
+      </address>
+    </section>
+
+    <!-- Center: social icons (inline SVG so you don't need extra assets) -->
+    <section class="footer-col socials" aria-label="Social links">
+      <ul class="social-list" role="list">
+          <li><a href="https://instagram.com" aria-label="Instagram"><img src="images/icons/instagram-square.svg" alt="Instagram"></a></li>
+          <li><a href="https://facebook.com" aria-label="Facebook"><img src="images/icons/facebook-square.svg" alt="Facebook"></a></li>
+          <li><a href="https://tiktok.com" aria-label="TikTok"><img src="images/icons/tiktok-square.svg" alt="TikTok"></a></li>
+      </ul>
+    </section>
+
+    <!-- Right: project/meta -->
+    <section class="footer-col meta">
+      <p>WDD231 Class Project</p>
+      <p>Samuel Alejandro Jaspe Grismán</p>
+      <p>© <span id="currentyear">2026</span> San Fernando de Apure Chamber of Commerce</p> <!-- date.js fills year -->
+      <p>Last Modification: <span id="lastModified">—</span></p> <!-- date.js fills this -->
+    </section>
+  </div>
+</footer>
+
+  <!-- Your existing scripts (no changes needed) -->
+  <script src="./scripts/navigation.js" defer></script> <!-- uses #menuButton, #siteNav, #primaryNav --> <!-- [2]() -->
+  <script src="./scripts/date.js" defer></script>        <!-- uses #currentyear, #lastModified -->        <!-- [1]) -->
+
+  <!-- New script for directory rendering (fetch + async/await) -->
+  <script src="./scripts/directory.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Arepera La Casita",
+    "address": "Av. Principal, San Fernando, Apure, VE",
+    "phone": "+58 247-555-0101",
+    "website": "https://example.com/arepera-la-casita",
+    "image": "arepera-la-casita.jpg",
+    "membershipLevel": 1,
+    "industry": "Food & Beverage",
+    "founded": 2012,
+    "description": "Traditional arepas and Venezuelan breakfasts with locally sourced ingredients."
+  },
+  {
+    "name": "Llanos Tech Solutions",
+    "address": "Calle 5, Centro Empresarial Orinoco, San Fernando, VE",
+    "phone": "+58 247-555-0123",
+    "website": "https://example.com/llanos-tech",
+    "image": "llanos-tech-solutions.png",
+    "membershipLevel": 3,
+    "industry": "IT Services",
+    "founded": 2018,
+    "description": "Managed IT, networking, and cloud consulting for SMEs."
+  },
+  {
+    "name": "EcoLlanos Tours",
+    "address": "Boulevard Páez, Local 8, San Fernando, VE",
+    "phone": "+58 247-555-0456",
+    "website": "https://example.com/ecollanos-tours",
+    "image": "ecollanos-tours.jpg",
+    "membershipLevel": 2,
+    "industry": "Tourism",
+    "founded": 2010,
+    "description": "Wildlife and river excursions across the Venezuelan Llanos."
+  },
+  {
+    "name": "Ferretería El Catire",
+    "address": "Av. Carabobo, Mercado Industrial, San Fernando, VE",
+    "phone": "+58 247-555-0789",
+    "website": "https://example.com/ferreteria-el-catire",
+    "image": "ferreteria-el-catire.jpg",
+    "membershipLevel": 1,
+    "industry": "Hardware",
+    "founded": 2001,
+    "description": "Tools, construction materials, and delivery services."
+  },
+  {
+    "name": "Apure Fitness Club",
+    "address": "Centro Comercial Arauca Plaza, Nivel 2, San Fernando, VE",
+    "phone": "+58 247-555-0999",
+    "website": "https://example.com/apure-fitness",
+    "image": "apure-fitness-club.jpg",
+    "membershipLevel": 2,
+    "industry": "Health & Wellness",
+    "founded": 2016,
+    "description": "Full-service gym with classes, nutrition plans, and personal training."
+  },
+  {
+    "name": "Cacao del Orinoco",
+    "address": "Km 2 Vía El Yagual, San Fernando, VE",
+    "phone": "+58 247-555-0202",
+    "website": "https://example.com/cacao-orinoco",
+    "image": "cacao-del-orinoco.png",
+    "membershipLevel": 3,
+    "industry": "Food Production",
+    "founded": 2008,
+    "description": "Artisanal chocolate made from regionally sourced cacao."
+  },
+  {
+    "name": "Hotel Llanero Real",
+    "address": "Av. Libertador, Frente a la Plaza Bolívar, San Fernando, VE",
+    "phone": "+58 247-555-0303",
+    "website": "https://example.com/hotel-llanero-real",
+    "image": "hotel-llanero-real.jpg",
+    "membershipLevel": 2,
+    "industry": "Hospitality",
+    "founded": 1999,
+    "description": "Business-friendly hotel with conference rooms and airport transfers."
+  },
+  {
+    "name": "Apure Digital Print",
+    "address": "Calle Páez, Edif. Comercial Apure, Local 12, San Fernando, VE",
+    "phone": "+58 247-555-0404",
+    "website": "https://example.com/apure-digital-print",
+    "image": "apure-digital-print.jpg",
+    "membershipLevel": 1,
+    "industry": "Printing",
+    "founded": 2014,
+    "description": "High‑quality printing, signage, and branding services."
+  }
+]

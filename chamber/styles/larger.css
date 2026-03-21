@@ -1,0 +1,50 @@
+/* larger.css — enhancements for wider screens */
+@media (min-width: 48rem) {
+  /* Header layout: logo/branding left, nav middle, controls right */
+  .site-header {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav-toggle { display: none; }  /* hide hamburger on larger screens */
+  .site-nav { display: block; }   /* show nav by default */
+
+  #siteNav .site-nav ul {
+    display: flex; gap: .5rem;
+    border: 0; background: transparent;
+    margin: 0; padding: 0;
+  }
+  #siteNav .site-nav li { border: 0; }
+  #siteNav .site-nav a {
+    display: inline-block;
+    padding: .5rem .75rem;
+    border-radius: .375rem;
+  }
+
+  /* Optional header controls (theme toggle) to the far right */
+  .header-controls { margin-top: 0; justify-self: end; }
+
+  /* Directory grid becomes denser */
+  #members.cards { grid-template-columns: repeat(2, 1fr); }
+
+  /* Footer layout: 3 columns */
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.2fr;
+    gap: 1rem;
+    align-items: start;
+    max-width: var(--maxw);
+    margin-inline: auto;
+  }
+  .footer-col.contact { justify-self: start; }
+  .footer-col.socials { justify-self: center; text-align: center; }
+  .footer-col.meta    { justify-self: end; text-align: right; }
+  .social-list { justify-content: center; }
+}
+
+/* Even denser directory on very wide screens */
+@media (min-width: 72rem) {
+  #members.cards { grid-template-columns: repeat(3, 1fr); }
+}
