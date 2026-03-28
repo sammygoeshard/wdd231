@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>San Fernando de Apure Chamber of Commerce</title>
+  <meta name="description" content="Official homepage of the San Fernando de Apure Chamber of Commerce">
+  <meta name="author" content="San Fernando de Apure Chamber of Commerce">
+
+  <link rel="icon" href="./images/favicon.ico">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/small.css">
+  <link rel="stylesheet" href="./styles/larger.css">
+</head>
+
+<body class="home">
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="branding">
+    <img src="./images/icons/acc-logo.svg" alt="San Fernando de Apure Chamber of Commerce logo">
+    <div class="titles">
+      <p class="site-eyebrow">San Fernando de Apure</p>
+      <h1 class="site-title">Chamber of Commerce</h1>
+    </div>
+  </div>
+
+  <button id="menuButton"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="primaryNav"
+          aria-label="Open main menu">☰</button>
+
+  <div id="siteNav">
+    <nav id="primaryNav" class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./directory.html">Directory</a></li>
+        <li><a href="./join.html">Join</a></li>
+        <li><a href="./discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="header-controls">
+    <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">🌓</button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <picture>
+      <source srcset="./images/hero-large.webp" media="(min-width: 48rem)">
+      <img src="./images/hero-small.webp" alt="San Fernando de Apure cityscape">
+    </picture>
+    <div class="hero-content">
+      <h2>Welcome to San Fernando de Apure</h2>
+      <p>Connecting business, culture, and opportunity.</p>
+      <a href="./join.html" class="cta-btn">Keynote Tickets</a>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section>
+    <h3 class="section-bar">Events</h3>
+    <p>April 12 — Small Business Networking Night</p>
+    <p>May 5 — Women in Business Keynote</p>
+  </section>
+
+  <!-- WEATHER -->
+  <section>
+    <h3 class="section-bar">Current Weather</h3>
+    <div class="weather-card">
+      <img src="./images/icons/partly-cloudy.svg" alt="Partly cloudy icon">
+      <p class="temp">75°F</p>
+      <p>Partly Cloudy</p>
+      <p>High: 82°F · Low: 68°F</p>
+      <p>Humidity: 45%</p>
+      <p>Sunrise: 6:12 AM · Sunset: 7:41 PM</p>
+    </div>
+  </section>
+
+  <section>
+    <h3 class="section-bar">Weather Forecast</h3>
+    <div class="forecast">
+      <p>Mon — 80°F</p>
+      <p>Tue — 83°F</p>
+      <p>Wed — 78°F</p>
+    </div>
+  </section>
+
+  <!-- BUSINESS SPOTLIGHT -->
+  <section>
+    <h3 class="section-bar">Business Spotlights</h3>
+
+    <div id="members" class="cards">
+      <article class="member">
+        <img src="./images/members/hotel-llanos.svg" alt="Hotel Llanero real. storefront">
+        <h3>Hotel Llanero real.</h3>
+        <p class="meta">Hospitality</p>
+        <p class="description">Experience the warmth of Llanos hospitality at Hotel Llanero real    .</p>
+        <p class="extra">📧 info@hotelllanos.com</p>
+        <p class="extra">📞 +58 247‑555‑0182</p>
+        <a href="#" class="website">Visit Website</a>
+      </article>
+
+      <article class="member">
+        <img src="./images/members/llanos-tech-solutions.svg" alt="Llanos Tech Solutions storefront">
+        <h3>Desert Tech</h3>
+        <p class="meta">Llanos Tech Solutions</p>
+        <p class="description">Innovating technology for the Llanos region.</p>
+        <p class="extra">📧 hello@llanostech.ve</p>
+        <p class="extra">📞 +58 247‑555‑0194</p>
+        <a href="#" class="website">Visit Website</a>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+
+    <section class="footer-col contact">
+      <h3 class="footer-heading">San Fernando de Apure Chamber of Commerce</h3>
+      <address class="vcard">
+        <span class="org">San Fernando de Apure Chamber of Commerce</span><br>
+        San Fernando de Apure, Venezuela<br><br>
+        <a href="mailto:info@sfapurechamber.org">info@sfapurechamber.org</a><br>
+        <a href="tel:+582475550123">+58 247‑555‑0123</a>
+      </address>
+    </section>
+
+    <section class="footer-col socials" aria-label="Social links">
+      <ul class="social-list">
+        <li><a href="#"><img src="./images/icons/youtube.svg" alt="YouTube"></a></li>
+        <li><a href="#"><img src="./images/icons/twitter.svg" alt="Twitter"></a></li>
+        <li><a href="#"><img src="./images/icons/linkedin.svg" alt="LinkedIn"></a></li>
+      </ul>
+    </section>
+
+    <section class="footer-col meta">
+      <p>WDD231 Class Project</p>
+      <p>© <span id="currentyear"></span> San Fernando de Apure Chamber of Commerce</p>
+      <p>Last Modification: <span id="lastModified"></span></p>
+    </section>
+
+  </div>
+</footer>
+
+<script src="./scripts/navigation.js" defer></script>
+<script src="./scripts/date.js" defer></script>
+
+<script>
+  document.getElementById("themeToggle")
+    .addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+    });
+</script>
+
+</body>
+</html>
