@@ -5,7 +5,7 @@
     "phone": "+58 247-555-0101",
     "website": "https://example.com/arepera-la-casita",
     "image": "logoipsum-396.svg",
-    "membershipLevel": 1,
+    "membership": "Bronze",
     "industry": "Food & Beverage",
     "founded": 2012,
     "description": "Traditional arepas and Venezuelan breakfasts with locally sourced ingredients."
@@ -16,7 +16,7 @@
     "phone": "+58 247-555-0123",
     "website": "https://example.com/llanos-tech",
     "image": "llanos-tech-solutions.svg",
-    "membershipLevel": 3,
+    "membership": "Gold",
     "industry": "IT Services",
     "founded": 2018,
     "description": "Managed IT, networking, and cloud consulting for SMEs."
@@ -27,7 +27,7 @@
     "phone": "+58 247-555-0456",
     "website": "https://example.com/ecollanos-tours",
     "image": "eco-llanos-tours.svg",
-    "membershipLevel": 2,
+    "membership": "Silver",
     "industry": "Tourism",
     "founded": 2010,
     "description": "Wildlife and river excursions across the Venezuelan Llanos."
@@ -38,7 +38,7 @@
     "phone": "+58 247-555-0789",
     "website": "https://example.com/ferreteria-el-catire",
     "image": "ferre-catire.svg",
-    "membershipLevel": 1,
+    "membership": "Bronze",
     "industry": "Hardware",
     "founded": 2001,
     "description": "Tools, construction materials, and delivery services."
@@ -49,7 +49,7 @@
     "phone": "+58 247-555-0999",
     "website": "https://example.com/apure-fitness",
     "image": "apure-fitness-club.svg",
-    "membershipLevel": 2,
+    "membership": "Silver",
     "industry": "Health & Wellness",
     "founded": 2016,
     "description": "Full-service gym with classes, nutrition plans, and personal training."
@@ -60,7 +60,7 @@
     "phone": "+58 247-555-0202",
     "website": "https://example.com/cacao-orinoco",
     "image": "cacao.svg",
-    "membershipLevel": 3,
+    "membership": "Gold",
     "industry": "Food Production",
     "founded": 2008,
     "description": "Artisanal chocolate made from regionally sourced cacao."
@@ -71,7 +71,7 @@
     "phone": "+58 247-555-0303",
     "website": "https://example.com/hotel-llanero-real",
     "image": "hotel-llanos.svg",
-    "membershipLevel": 2,
+    "membership": "Silver",
     "industry": "Hospitality",
     "founded": 1999,
     "description": "Business-friendly hotel with conference rooms and airport transfers."
@@ -82,7 +82,7 @@
     "phone": "+58 247-555-0404",
     "website": "https://example.com/apure-digital-print",
     "image": "apure-print.svg",
-    "membershipLevel": 1,
+    "membership": "Bronze",
     "industry": "Printing",
     "founded": 2014,
     "description": "High‑quality printing, signage, and branding services."

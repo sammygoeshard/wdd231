@@ -3,17 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>San Fernando de Apure Chamber of Commerce</title>
-  <meta name="description" content="Official homepage of the San Fernando de Apure Chamber of Commerce">
-  <meta name="author" content="San Fernando de Apure Chamber of Commerce">
+  <meta name="description" content="unOfficial homepage of the San Fernando de Apure Chamber of Commerce">
+  <meta name="author" content="Samuel Jaspe - WDD231 Class Project">
+  <meta property="og:title" content="San Fernando Chamber Member Directory" />
+  <meta property="og:description" content="Browse and connect with trusted local businesses in San Fernando. San Fernando Chamber of Commerce communicate and act" />
+  <meta property="og:image" content="https://sammygoeshard.github.io/wdd231/chamber/images/og-index.webp" />
+  <meta property="og:url" content="https://sammygoeshard.github.io/wdd231/chamber/index.html" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="./images/favicon.ico">
+  <script src="./scripts/navigation.js" defer></script>
+  <script src="./scripts/date.js" defer></script>
+  <script src="./scripts/weather.js" defer></script>
+  <script src="./scripts/spotlight.js" defer></script>
+
 
   <!-- Styles -->
   <link rel="stylesheet" href="./styles/normalize.css">
-  <link rel="stylesheet" href="./styles/small.css">
-  <link rel="stylesheet" href="./styles/larger.css">
+  <link rel="stylesheet" href="./styles/home.css">
 </head>
 
 <body class="home">
@@ -21,13 +31,13 @@
 
 <header class="site-header">
   <div class="branding">
-    <img src="./images/icons/acc-logo.svg" alt="San Fernando de Apure Chamber of Commerce logo">
+    <img src="./images/Icons/logoipsum-248.svg" alt="San Fernando de Apure Chamber of Commerce logo">
     <div class="titles">
       <p class="site-eyebrow">San Fernando de Apure</p>
       <h1 class="site-title">Chamber of Commerce</h1>
     </div>
-  </div>
-
+  
+</div>
   <button id="menuButton"
           class="nav-toggle"
           aria-expanded="false"
@@ -44,19 +54,16 @@
       </ul>
     </nav>
   </div>
-
-  <div class="header-controls">
-    <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">🌓</button>
-  </div>
 </header>
+
 
 <main id="main">
 
   <!-- HERO -->
   <section class="hero">
     <picture>
-      <source srcset="./images/hero-large.webp" media="(min-width: 48rem)">
-      <img src="./images/hero-small.webp" alt="San Fernando de Apure cityscape">
+      <source srcset="./images/skyscape.webp" media="(min-width: 48rem)">
+      <img src="./images/skyscape.webp" alt="San Fernando de Apure cityscape">
     </picture>
     <div class="hero-content">
       <h2>Welcome to San Fernando de Apure</h2>
@@ -65,60 +72,35 @@
     </div>
   </section>
 
-  <!-- EVENTS -->
-  <section>
-    <h3 class="section-bar">Events</h3>
-    <p>April 12 — Small Business Networking Night</p>
-    <p>May 5 — Women in Business Keynote</p>
-  </section>
-
   <!-- WEATHER -->
-  <section>
-    <h3 class="section-bar">Current Weather</h3>
-    <div class="weather-card">
-      <img src="./images/icons/partly-cloudy.svg" alt="Partly cloudy icon">
-      <p class="temp">75°F</p>
-      <p>Partly Cloudy</p>
-      <p>High: 82°F · Low: 68°F</p>
-      <p>Humidity: 45%</p>
-      <p>Sunrise: 6:12 AM · Sunset: 7:41 PM</p>
-    </div>
-  </section>
+  <section class="weather">
+  <h3 class="section-bar">Current Weather</h3>
 
-  <section>
-    <h3 class="section-bar">Weather Forecast</h3>
-    <div class="forecast">
-      <p>Mon — 80°F</p>
-      <p>Tue — 83°F</p>
-      <p>Wed — 78°F</p>
-    </div>
-  </section>
+  <div class="weather-card">
+    <img id="weather-icon" src="" alt="" width="48" height="48">
+    <p id="current-temp" class="temp"></p>
+    <p id="weather-desc"></p>
+    <p>
+      High: <span id="high-temp"></span> ·
+      Low: <span id="low-temp"></span>
+    </p>
+    <p>Humidity: <span id="humidity"></span></p>
+    <p>
+      Sunrise: <span id="sunrise"></span> ·
+      Sunset: <span id="sunset"></span>
+    </p>
+  </div>
+ </section>
+
+ <section class="forecast">
+   <h3 class="section-bar">Weather Forecast</h3>
+   <div id="forecast-list"></div>
+ </section>
 
   <!-- BUSINESS SPOTLIGHT -->
-  <section>
-    <h3 class="section-bar">Business Spotlights</h3>
-
-    <div id="members" class="cards">
-      <article class="member">
-        <img src="./images/members/hotel-llanos.svg" alt="Hotel Llanero real. storefront">
-        <h3>Hotel Llanero real.</h3>
-        <p class="meta">Hospitality</p>
-        <p class="description">Experience the warmth of Llanos hospitality at Hotel Llanero real    .</p>
-        <p class="extra">📧 info@hotelllanos.com</p>
-        <p class="extra">📞 +58 247‑555‑0182</p>
-        <a href="#" class="website">Visit Website</a>
-      </article>
-
-      <article class="member">
-        <img src="./images/members/llanos-tech-solutions.svg" alt="Llanos Tech Solutions storefront">
-        <h3>Desert Tech</h3>
-        <p class="meta">Llanos Tech Solutions</p>
-        <p class="description">Innovating technology for the Llanos region.</p>
-        <p class="extra">📧 hello@llanostech.ve</p>
-        <p class="extra">📞 +58 247‑555‑0194</p>
-        <a href="#" class="website">Visit Website</a>
-      </article>
-    </div>
+   <section class="spotlights">
+  <h3 class="section-bar">Business Spotlights</h3>
+  <div id="spotlights" class="cards"></div>
   </section>
 
 </main>
@@ -138,9 +120,9 @@
 
     <section class="footer-col socials" aria-label="Social links">
       <ul class="social-list">
-        <li><a href="#"><img src="./images/icons/youtube.svg" alt="YouTube"></a></li>
-        <li><a href="#"><img src="./images/icons/twitter.svg" alt="Twitter"></a></li>
-        <li><a href="#"><img src="./images/icons/linkedin.svg" alt="LinkedIn"></a></li>
+        <li><a href="https://youtu.be/dQw4w9WgXcQ?si=_OKyNq1TU14WEpHp"><img src="./images/Icons/youtube.svg" alt="YouTube"></a></li>
+        <li><a href="#"><img src="./images/Icons/facebook-square.svg" alt="Facebook"></a></li>
+        <li><a href="#"><img src="./images/Icons/instagram-square.svg" alt="Instagram"></a></li>
       </ul>
     </section>
 
@@ -152,16 +134,5 @@
 
   </div>
 </footer>
-
-<script src="./scripts/navigation.js" defer></script>
-<script src="./scripts/date.js" defer></script>
-
-<script>
-  document.getElementById("themeToggle")
-    .addEventListener("click", () => {
-      document.documentElement.classList.toggle("dark");
-    });
-</script>
-
 </body>
 </html>
