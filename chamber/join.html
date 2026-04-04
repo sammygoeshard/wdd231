@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>San Fernando de Apure Chamber of Commerce</title>
+  <meta name="description" content="unOfficial Join page of the San Fernando de Apure Chamber of Commerce">
+  <meta name="author" content="Samuel Jaspe - WDD231 Class Project">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="San Fernando de Apure Chamber of Commerce">
+  <meta property="og:url" content="https://sammygoeshard.github.io/wdd231/chamber/">
+  <meta property="og:image" content="https://sammygoeshard.github.io/wdd231/chamber/images/og-index.webp">
+  <meta property="og:description" content="Browse and connect with trusted local businesses in San Fernando. San Fernando Chamber of Commerce, communicate and Act">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="./images/favicon.ico">
+  <script src="./scripts/navigation.js" defer></script>
+  <script src="./scripts/date.js" defer></script>
+  <script src="./scripts/modals.js" defer></script>
+
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/join.css">
+  
+</head>
+<body class="join">
+  <header class="site-header">
+    <div class="branding">
+      <img src="./images/Icons/logoipsum-248.svg" alt="San Fernando de Apure Chamber of Commerce logo">
+    </div>
+    <div class="titles">
+      <p class="site-eyebrow">San Fernando de Apure</p>
+      <h1 class="site-title">Chamber of Commerce</h1>
+    </div>
+
+    <button id="menuButton"
+            class="nav-toggle"
+            aria-expanded="false"
+            aria-controls="primaryNav"
+            aria-label="Open main menu">☰</button>
+
+    <div id="siteNav">
+      <nav id="primaryNav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./directory.html">Directory</a></li>
+          <li><a href="./join.html">Join</a></li>
+          <li><a href="./discover.html">Discover</a></li>
+        </ul>
+      </nav>
+    </div>
+   </header>
+    
+    
+   <main class="join-page">
+
+    <section class="registration-form">
+      <h2>Membership Application Form</h2>
+
+      <form method="get" action="thankyou.html">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstName" title="Enter your first name" autocomplete="given-name" required>
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastName" title="Enter your last name" autocomplete="family-name" required>
+
+        <label for="org-title">Organizational Title</label>
+        <input type="text" id="org-title" name="organizationTitle" title="Your title within the organization" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+
+        <label for="user-email">Email Address</label>
+        <input type="email" id="user-email" name="email" title="Enter a valid email address" autocomplete="email" placeholder="john89@gmail.com" required>
+
+        <label for="phone">Mobile Phone</label>
+        <input type="tel" id="phone" name="mobile" title="Enter your mobile phone number" autocomplete="tel" required>
+
+        <label for="org-name">Business / Organization Name</label>
+        <input type="text" id="org-name" name="organization" title="Enter your organization name" autocomplete="organization" required>
+
+        <fieldset>
+          <legend>Membership Level</legend>
+
+          <input type="radio" id="np-mem" name="membership" value="np">
+          <label for="np-mem">NP Membership</label>
+
+          <input type="radio" id="bronze-mem" name="membership" value="bronze">
+          <label for="bronze-mem">Bronze Membership</label>
+
+          <input type="radio" id="silver-mem" name="membership" value="silver">
+          <label for="silver-mem">Silver Membership</label>
+
+          <input type="radio" id="gold-mem" name="membership" value="gold">
+          <label for="gold-mem">Gold Membership</label>
+        </fieldset>
+
+        <label for="biz-desc">Business Description</label>
+        <textarea id="biz-desc" name="description" title="Describe your business or organization"></textarea>
+
+        <input type="hidden" name="timestamp" id="timestamp">
+
+        <div class="form-buttons">
+          <input type="submit" value="Submit Application">
+        </div>
+      </form>
+    </section>
+
+      <aside class="membership-levels">
+        <h2>Membership Levels</h2>
+
+      <section class="level-card np">
+        <h3>Non Profit Membership Level</h3>
+        <button type="button" data-modal="modal-np">Learn More</button>
+      </section>
+
+      <section class="level-card bronze">
+        <h3>Bronze Membership Level</h3>
+        <button type="button" data-modal="modal-bronze">Learn More</button>
+      </section>
+
+      <section class="level-card silver">
+        <h3>Silver Membership Level</h3>
+        <button type="button" data-modal="modal-silver">Learn More</button>
+      </section>
+
+      <section class="level-card gold">
+        <h3>Gold Membership Level</h3>
+        <button type="button" data-modal="modal-gold">Learn More</button>
+      </section>
+      </aside>
+  </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+
+        <section class="footer-col contact">
+          <h3 class="footer-heading">San Fernando de Apure Chamber of Commerce</h3>
+          <address class="vcard">
+            <span class="org">San Fernando de Apure Chamber of Commerce</span><br>
+            San Fernando de Apure, Venezuela<br><br>
+            <a href="mailto:info@sfapurechamber.org">info@sfapurechamber.org</a><br>
+            <a href="tel:+582475550123">+58 247‑555‑0123</a>
+          </address>
+        </section>
+
+        <section class="footer-col socials" aria-label="Social links">
+          <ul class="social-list">
+            <li><a href="https://youtu.be/dQw4w9WgXcQ?si=_OKyNq1TU14WEpHp"><img src="./images/Icons/youtube.svg" alt="YouTube"></a></li>
+            <li><a href="#"><img src="./images/Icons/facebook-square.svg" alt="Facebook"></a></li>
+            <li><a href="#"><img src="./images/Icons/instagram-square.svg" alt="Instagram"></a></li>
+          </ul>
+        </section>
+
+        <section class="footer-col meta">
+          <p>WDD231 Class Project</p>
+          <p>© <span id="currentyear"></span> San Fernando de Apure Chamber of Commerce</p>
+          <p>Last Modification: <span id="lastModified"></span></p>
+        </section>
+      </div>
+</footer>
+
+
+    <!-- =======================
+     MEMBERSHIP LEVEL MODALS
+    ======================= -->
+
+    <dialog id="modal-np">
+      <h3>Non‑Profit Membership</h3>
+      <p>
+        No annual fee. Designed for non‑profit organizations.
+        Includes basic directory listing and access to select events.
+      </p>
+      <button class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="modal-bronze">
+      <h3>Bronze Membership</h3>
+      <p>
+        Affordable annual membership with event discounts,
+        business listing, and training opportunities.
+      </p>
+      <button class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="modal-silver">
+      <h3>Silver Membership</h3>
+      <p>
+        Includes all Bronze benefits plus advertising credits,
+        advanced training sessions, and special event invitations.
+      </p>
+      <button class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="modal-gold">
+      <h3>Gold Membership</h3>
+      <p>
+        Premium membership with spotlight advertising,
+        maximum event discounts, and VIP networking opportunities.
+      </p>
+      <button class="close-modal">Close</button>
+    </dialog>
+</body>
+</html>

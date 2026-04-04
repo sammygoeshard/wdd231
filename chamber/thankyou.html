@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>San Fernando de Apure Chamber of Commerce</title>
-  <meta name="description" content="unOfficial homepage of the San Fernando de Apure Chamber of Commerce">
+  <meta name="description" content="Thank you for your application to the San Fernando de Apure Chamber of Commerce">
   <meta name="author" content="Samuel Jaspe - WDD231 Class Project">
   <meta property="og:type" content="website">
   <meta property="og:title" content="San Fernando de Apure Chamber of Commerce">
@@ -17,11 +17,12 @@
   <link rel="icon" href="./images/favicon.ico">
   <script src="./scripts/navigation.js" defer></script>
   <script src="./scripts/date.js" defer></script>
+  <script src="./scripts/thankyou.js" defer></script>
 
   <!-- Styles -->
   <link rel="stylesheet" href="./styles/normalize.css">
   <link rel="stylesheet" href="./styles/base.css">
-  <link rel="stylesheet" href="./styles/home.css">
+  <link rel="stylesheet" href="./styles/join.css">
 </head>
 
 <body class="home">
@@ -53,56 +54,30 @@
  </div>
 </header>
 
+  <!-- MAIN -->
+  <main class="join-page">
+    <section class="registration-form">
+      <h2>Thank You for Your Application!</h2>
 
-<main id="main">
+      <p>
+        We’ve received your membership application. Below is a summary of the
+        information you submitted:
+      </p>
 
-  <!-- HERO -->
-  <section class="hero">
-    <picture>
-      <source srcset="./images/skyscape.webp" media="(min-width: 48rem)">
-      <img src="./images/skyscape.webp" alt="San Fernando de Apure cityscape">
-    </picture>
-    <div class="hero-content">
-      <h2>Welcome to San Fernando de Apure</h2>
-      <p>Connecting business, culture, and opportunity.</p>
-      <a href="./join.html" class="cta-btn">Keynote Tickets</a>
-    </div>
-  </section>
+      <ul class="submission-summary">
+        <li><strong>First Name:</strong> <span id="firstName"></span></li>
+        <li><strong>Last Name:</strong> <span id="lastName"></span></li>
+        <li><strong>Email:</strong> <span id="email"></span></li>
+        <li><strong>Mobile Phone:</strong> <span id="mobile"></span></li>
+        <li><strong>Organization:</strong> <span id="organization"></span></li>
+        <li><strong>Submitted On:</strong> <span id="timestamp"></span></li>
+      </ul>
 
-  <!-- WEATHER -->
-  <section class="weather">
-  <h3 class="section-bar">Current Weather</h3>
+      <a href="./index.html" class="back-home">← Back to Home</a>
+    </section>
+  </main>
 
-  <div class="weather-card">
-    <img id="weather-icon" src="images/Icons/partly-cloudy.svg" alt="Weather Icon" width="48" height="48">
-    <p id="current-temp" class="temp"></p>
-    <p id="weather-desc"></p>
-    <p>
-      High: <span id="high-temp"></span> ·
-      Low: <span id="low-temp"></span>
-    </p>
-    <p>Humidity: <span id="humidity"></span></p>
-    <p>
-      Sunrise: <span id="sunrise"></span> ·
-      Sunset: <span id="sunset"></span>
-    </p>
-  </div>
- </section>
-
- <section class="forecast">
-   <h3 class="section-bar">Weather Forecast</h3>
-   <div id="forecast-list"></div>
- </section>
-
-  <!-- BUSINESS SPOTLIGHT -->
-   <section class="spotlights">
-  <h3 class="section-bar">Business Spotlights</h3>
-  <div id="spotlights" class="cards"></div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
+  <footer class="site-footer">
   <div class="footer-grid">
 
     <section class="footer-col contact">
@@ -131,5 +106,6 @@
 
   </div>
 </footer>
+
 </body>
 </html>
