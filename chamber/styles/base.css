@@ -8,7 +8,7 @@
   --surface: #f3f4f6;
   --border: #e5e7eb;
   --radius: 0.5rem;
-  --space: 1.5rem; /* Aumentado para mejor respiro */
+  --space: 0.5rem; /* Aumentado para mejor respiro */
   --maxw: 1900px;
   --shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
   --font: "Inter", system-ui, sans-serif;
@@ -24,48 +24,73 @@ body {
   color: var(--text);
   background: var(--bg);
   line-height: 1.6;
+  
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* HEADER REPARADO */
+/* =========================
+   HEADER — FIXED FOR EXISTING HTML
+========================= */
+
 .site-header {
-  border-bottom: 1px solid var(--border);
   background-color: var(--brand-dark);
   color: #fff;
-  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  max-width: var(--maxw);
-  margin: 0 auto;
-  width: 100%;
+  gap: 1.25rem;
+
+  padding: 1rem 1.25rem;
+
+  /* CRITICAL */
+  flex-wrap: nowrap;
 }
 
+/* Logo */
 .branding {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+  flex-shrink: 0;
 }
 
 .branding img {
-  width: 50px;
-  height: 50px;
-}
-/* NAVIGATION */
-  .nav-toggle {
-  align-self: flex-start;
-  font-size: 1.25rem;
-  padding: 0.5rem 0.75rem;
-  border-radius: var(--radius);
-  background: var(--surface);
-  border: 1px solid var(--border);
-  cursor: pointer;
+  width: 80px;
+  height: auto;
+  margin: 0;
 }
 
-.site-nav {
-  display: none;/* Oculto por defecto en móvil */
+/* Titles */
+.titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* tighten eyebrow/title spacing */
+  gap: 0.15rem;
+
+  text-align: left;
+}
+
+/* Remove default margins (THIS is the separation bug) */
+.site-eyebrow,
+.site-title {
+  margin: 0;
+}
+
+.site-eyebrow {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.site-title {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+/* Push nav to the far right */
+#siteNav {
+  margin-left: auto;
 }
 
 #menuButton[aria-expanded="true"] ~ #siteNav .site-nav {
@@ -90,7 +115,44 @@ body {
   padding: 0.75rem 1rem;
   text-decoration: none;
   color: var(--text);
+  position: relative;
+  font-weight: 500;
 }
+
+
+/* =========================
+   CURRENT PAGE INDICATOR
+   (CSS ONLY)
+========================= */
+
+* Home */
+body.index .site-nav a[href$="index.html"],
+/* Directory */
+body.directory .site-nav a[href$="directory.html"],
+/* Join */
+body.join .site-nav a[href$="join.html"],
+/* Discover */
+body.discover .site-nav a[href$="discover.html"] {
+  font-weight: 700;
+  color: var(--brand-dark);
+}
+
+/* underline indicator */
+body.index .site-nav a[href$="index.html"]::after,
+body.directory .site-nav a[href$="directory.html"]::after,
+body.join .site-nav a[href$="join.html"]::after,
+body.discover .site-nav a[href$="discover.html"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 3px;
+  background-color: var(--brand-dark);
+  border-radius: 2px;
+}
+
+
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
@@ -139,6 +201,9 @@ body {
     display: flex;
     list-style: none;
     gap: 1.5rem;
+    background: #fff;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius);
   }
 
   .nav-toggle {

@@ -207,6 +207,45 @@
 }
 
 /* =========================================
+   MEMBERSHIP CARD COLORS
+========================================= */
+
+/* NP – neutral (default) */
+.level-card.np {
+  background: #d1d5db; /* existing gray */
+}
+
+/* Bronze */
+.level-card.bronze {
+  background: linear-gradient(
+    135deg,
+    #f04b18,
+    #c95722
+  );
+  color: #111;
+}
+
+/* Silver */
+.level-card.silver {
+  background: linear-gradient(
+    135deg,
+    #e5e7eb,
+    #cbd5e1
+  );
+  color: #111;
+}
+
+/* Gold */
+.level-card.gold {
+  background: linear-gradient(
+    135deg,
+    #facc15,
+    #eab308
+  );
+  color: #111;
+}
+
+/* =========================================
    MODALS
 ========================================= */
 
