@@ -1,6 +1,7 @@
 /* =========================================
    JOIN PAGE – MOBILE FIRST
-   ========================================= */
+   (SCOPED TO .join-page)
+========================================= */
 
 .join-page {
   max-width: var(--maxw);
@@ -25,14 +26,14 @@
 /* ------------------------
    FORM CARD
 ------------------------- */
-.registration-form {
+.join-page .registration-form {
   background: var(--surface);
   border-radius: var(--radius);
   padding: 1.5rem;
   box-shadow: var(--shadow);
 }
 
-.registration-form h2 {
+.join-page .registration-form h2 {
   margin-bottom: 1rem;
   color: var(--brand-dark);
 }
@@ -40,7 +41,7 @@
 /* ------------------------
    LABEL + INPUT STACK
 ------------------------- */
-.registration-form label {
+.join-page .registration-form label {
   display: block;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -49,14 +50,14 @@
 }
 
 /* Required-field red bar */
-.registration-form label > input[required],
-.registration-form label > textarea[required] {
+.join-page .registration-form label > input[required],
+.join-page .registration-form label > textarea[required] {
   border-left: 4px solid var(--brand);
 }
 
 /* Inputs */
-.registration-form input,
-.registration-form textarea {
+.join-page .registration-form input,
+.join-page .registration-form textarea {
   display: block;
   width: 100%;
   margin-top: 0.25rem;
@@ -67,34 +68,34 @@
   background: var(--bg);
 }
 
-.registration-form input:focus,
-.registration-form textarea:focus {
+.join-page .registration-form input:focus,
+.join-page .registration-form textarea:focus {
   outline: none;
   border-color: var(--brand);
 }
 
 /* Textarea */
-.registration-form textarea {
+.join-page .registration-form textarea {
   resize: vertical;
   min-height: 80px;
 }
 
 /* ------------------------
-   GENDER FIELDSET
+   FIELDSET
 ------------------------- */
-.registration-form fieldset {
+.join-page .registration-form fieldset {
   margin-bottom: 1.5rem;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1rem;
 }
 
-.registration-form legend {
+.join-page .registration-form legend {
   padding: 0 0.5rem;
   font-weight: 600;
 }
 
-.registration-form fieldset label {
+.join-page .registration-form fieldset label {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -105,13 +106,13 @@
 /* ------------------------
    ACTION BUTTONS
 ------------------------- */
-.form-buttons {
+.join-page .form-buttons {
   display: flex;
   gap: 1rem;
   margin-top: 1.5rem;
 }
 
-.form-buttons button {
+.join-page .form-buttons button {
   flex: 1;
   padding: 0.75rem;
   font-weight: 600;
@@ -120,26 +121,25 @@
   cursor: pointer;
 }
 
-.form-buttons button[type="submit"] {
+.join-page .form-buttons button[type="submit"] {
   background: var(--brand-dark);
   color: #fff;
 }
 
-.form-buttons button[type="reset"] {
+.join-page .form-buttons button[type="reset"] {
   background: transparent;
   border: 1px solid var(--border);
   color: var(--muted);
 }
 
-.form-buttons button:hover {
+.join-page .form-buttons button:hover {
   opacity: 0.9;
 }
 
 /* =========================================
    DESKTOP LAYOUT
-   ========================================= */
+========================================= */
 @media (min-width: 64rem) {
-
   .join-page {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -147,53 +147,46 @@
     align-items: start;
   }
 
-  /* Form remains left */
-  .registration-form {
+  .join-page .registration-form {
     padding: 2rem;
   }
 }
 
 /* =========================================
-   MEMBERSHIP LEVELS – MOBILE FIRST
+   MEMBERSHIP LEVELS
 ========================================= */
-
-.membership-levels {
+.join-page .membership-levels {
   margin-top: 2rem;
   animation: fadeUp 0.9s ease both;
 }
 
-.membership-levels h2 {
+.join-page .membership-levels h2 {
   margin-bottom: 1rem;
   color: var(--brand-dark);
 }
 
-/* Individual card */
-.level-card {
+.join-page .level-card {
   background: #d1d5db;
   border-radius: 14px;
   padding: 1.5rem 1rem;
   margin-bottom: 1rem;
   text-align: center;
   box-shadow: var(--shadow);
-
-  /* animation stagger */
   opacity: 0;
   animation: fadeUp 0.7s ease forwards;
 }
 
-/* stagger timing */
-.level-card:nth-child(2) { animation-delay: 0.1s; }
-.level-card:nth-child(3) { animation-delay: 0.2s; }
-.level-card:nth-child(4) { animation-delay: 0.3s; }
-.level-card:nth-child(5) { animation-delay: 0.4s; }
+.join-page .level-card:nth-child(2) { animation-delay: 0.1s; }
+.join-page .level-card:nth-child(3) { animation-delay: 0.2s; }
+.join-page .level-card:nth-child(4) { animation-delay: 0.3s; }
+.join-page .level-card:nth-child(5) { animation-delay: 0.4s; }
 
-.level-card h3 {
+.join-page .level-card h3 {
   margin-bottom: 0.75rem;
   font-size: 1rem;
 }
 
-/* Learn More button */
-.level-card button {
+.join-page .level-card button {
   padding: 0.4rem 1rem;
   border-radius: 999px;
   border: 1px solid var(--border);
@@ -202,54 +195,14 @@
   font-size: 0.875rem;
 }
 
-.level-card button:hover {
+.join-page .level-card button:hover {
   background: var(--surface);
-}
-
-/* =========================================
-   MEMBERSHIP CARD COLORS
-========================================= */
-
-/* NP – neutral (default) */
-.level-card.np {
-  background: #d1d5db; /* existing gray */
-}
-
-/* Bronze */
-.level-card.bronze {
-  background: linear-gradient(
-    135deg,
-    #f04b18,
-    #c95722
-  );
-  color: #111;
-}
-
-/* Silver */
-.level-card.silver {
-  background: linear-gradient(
-    135deg,
-    #e5e7eb,
-    #cbd5e1
-  );
-  color: #111;
-}
-
-/* Gold */
-.level-card.gold {
-  background: linear-gradient(
-    135deg,
-    #facc15,
-    #eab308
-  );
-  color: #111;
 }
 
 /* =========================================
    MODALS
 ========================================= */
-
-dialog {
+.join-page dialog {
   border: none;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -259,20 +212,20 @@ dialog {
   animation: fadeUp 0.3s ease both;
 }
 
-dialog::backdrop {
+.join-page dialog::backdrop {
   background: rgba(0, 0, 0, 0.5);
 }
 
-dialog h3 {
+.join-page dialog h3 {
   margin-top: 0;
   color: var(--brand-dark);
 }
 
-dialog p {
+.join-page dialog p {
   margin-bottom: 1.5rem;
 }
 
-.close-modal {
+.join-page .close-modal {
   padding: 0.5rem 1.25rem;
   background: var(--brand-dark);
   color: #fff;
@@ -281,17 +234,21 @@ dialog p {
   cursor: pointer;
 }
 
-.submission-summary {
+/* =========================================
+   SHARED COMPONENTS (USED BY THANKYOU)
+   These are STILL scoped to join-page
+========================================= */
+.join-page .submission-summary {
   list-style: none;
   padding: 0;
   margin: 1.5rem 0;
 }
 
-.submission-summary li {
+.join-page .submission-summary li {
   margin-bottom: 0.5rem;
 }
 
-.back-home {
+.join-page .back-home {
   display: inline-block;
   margin-top: 1.5rem;
   color: var(--brand-dark);
@@ -299,6 +256,6 @@ dialog p {
   font-weight: 600;
 }
 
-.back-home:hover {
+.join-page .back-home:hover {
   text-decoration: underline;
 }

@@ -1,0 +1,11 @@
+/* thankyou.css */
+.thankyou-page {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.thankyou-page .registration-form {
+  max-width: 640px;
+  margin: 0 auto;
+}
