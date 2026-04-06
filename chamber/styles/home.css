@@ -53,9 +53,7 @@ position: relative;            /* anchor for absolute children */
   text-decoration: none;
   border-radius: var(--radius);
   font-weight: 700;
-
   z-index: 2; 
-
 }
 
 /* COMPONENTES */
