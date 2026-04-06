@@ -16,8 +16,9 @@ img {
   display: block;
 }
 
-/* HERO SECTION REPARADA */
+/* HERO SECTION*/
 .hero {
+position: relative;            /* anchor for absolute children */
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space);
@@ -41,6 +42,10 @@ img {
 }
 
 .cta-btn {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+
   display: inline-block;
   padding: 0.8rem 1.5rem;
   background: var(--brand);
@@ -48,10 +53,13 @@ img {
   text-decoration: none;
   border-radius: var(--radius);
   font-weight: 700;
-  width: fit-content;
+
+  z-index: 2; 
+
 }
 
 /* COMPONENTES */
+
 .section-bar {
   background: var(--bar);
   color: #fff;
@@ -108,6 +116,7 @@ img {
   .hero {
     grid-column: 1 / -1; /* El Hero ocupa todo el ancho arriba */
     grid-template-columns: 1fr 1fr;
+    height: 100%;
   }
   /* ESTILOS DE FOOTER MOVIDOS A base.css */
   .cards {

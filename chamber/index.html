@@ -15,8 +15,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="./images/favicon.ico">
+  
   <script src="./scripts/navigation.js" defer></script>
   <script src="./scripts/date.js" defer></script>
+  <script src="./scripts/weather.js" defer></script>
+  <script src="./scripts/spotlight.js" defer></script>
 
   <!-- Styles -->
   <link rel="stylesheet" href="./styles/normalize.css">
@@ -29,17 +32,23 @@
 
 <header class="site-header">
   <div class="branding">
-    <img src="./images/Icons/logoipsum-248.svg" alt="San Fernando de Apure Chamber of Commerce logo">
-    <div class="titles">
-      <p class="site-eyebrow">San Fernando de Apure</p>
-      <h1 class="site-title">Chamber of Commerce</h1>
+    <img src="./images/Icons/logoipsum-248.svg"
+         alt="San Fernando de Apure Chamber of Commerce logo">
   </div>
-  
-  <button id="menuButton"
-          class="nav-toggle"
-          aria-expanded="false"
-          aria-controls="primaryNav"
-          aria-label="Open main menu">☰</button>
+
+  <div class="titles">
+    <p class="site-eyebrow">San Fernando de Apure</p>
+    <h1 class="site-title">Chamber of Commerce</h1>
+  </div>
+
+  <button
+    id="menuButton"
+    class="nav-toggle"
+    aria-expanded="false"
+    aria-controls="primaryNav"
+    aria-label="Open main menu">
+    ☰
+  </button>
 
   <div id="siteNav">
     <nav id="primaryNav" class="site-nav" aria-label="Primary">
@@ -50,9 +59,8 @@
         <li><a href="./discover.html">Discover</a></li>
       </ul>
     </nav>
- </div>
+  </div>
 </header>
-
 
 <main id="main">
 
