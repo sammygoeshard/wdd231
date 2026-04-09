@@ -87,6 +87,10 @@ body {
   line-height: 1.1;
 }
 
+.site-nav {
+  display: none; /* Hidden by default, shown when menu is open */
+}
+
 /* Push nav to the far right */
 #siteNav {
   margin-left: auto;
@@ -95,6 +99,7 @@ body {
 #menuButton[aria-expanded="true"] ~ #siteNav .site-nav {
   display: block;
 }
+
 
 .site-nav ul {
   list-style: none;
@@ -118,12 +123,44 @@ body {
   font-weight: 500;
 }
 
+/* ===============================
+   MOBILE MENU BUTTON – STYLED
+================================ */
+
+.nav-toggle {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0.4rem 0.65rem;
+  border-radius: 0.4rem;
+
+  cursor: pointer;
+
+  /* alignment */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* subtle polish */
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.nav-toggle:hover,
+.nav-toggle:focus-visible {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: #ffffff;
+}
+
 
 /* =========================
    CURRENT PAGE INDICATOR
    (CSS ONLY)
 ========================= */
-
 /* page indicators */
 body.index .site-nav a[href$="index.html"],
 body.directory .site-nav a[href$="directory.html"],

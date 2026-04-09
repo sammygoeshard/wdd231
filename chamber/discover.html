@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Fernando de Apure Chamber of Commerce</title>
+    <meta name="description" content="unOfficial homepage of the San Fernando de Apure Chamber of Commerce">
+    <meta name="author" content="Samuel Jaspe - WDD231 Class Project">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="San Fernando de Apure Chamber of Commerce">
+    <meta property="og:url" content="https://sammygoeshard.github.io/wdd231/chamber/">
+    <meta property="og:image" content="https://sammygoeshard.github.io/wdd231/chamber/images/og-index.webp">
+    <meta property="og:description" content="Browse and connect with trusted local businesses in San Fernando. San Fernando Chamber of Commerce, communicate and Act">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="./images/favicon.ico">
+    
+    <script src="./scripts/navigation.js" defer></script>
+    <script src="./scripts/date.js" defer></script>
+    <script type="module" src="./scripts/discover.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/discover.css">
+    </head>
+
+    <body class="discover">
+        <a class="skip-link" href="#main"> Skip to main content</a>
+
+    <header class="site-header">
+    <div class="branding">
+        <img src="./images/Icons/logoipsum-248.svg"
+            alt="San Fernando de Apure Chamber of Commerce logo">
+    </div>
+
+    <div class="titles">
+        <p class="site-eyebrow">San Fernando de Apure</p>
+        <h1 class="site-title">Chamber of Commerce</h1>
+    </div>
+
+    <button
+        id="menuButton"
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="primaryNav"
+        aria-label="Open main menu">
+        ☰
+    </button>
+
+    <div id="siteNav">
+        <nav id="primaryNav" class="site-nav" aria-label="Primary">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./directory.html">Directory</a></li>
+            <li><a href="./join.html">Join</a></li>
+            <li><a href="./discover.html">Discover</a></li>
+        </ul>
+        </nav>
+    </div>
+    </header>
+
+   
+    <main id="main" class="discover-main">
+    <section class="visit-message" id="visitMessage"></section>
+
+    <section class="discover-grid" id="discoverGrid">
+        <!-- Cards populated dynamically by JavaScript -->
+    </section>
+    </main>
+
+
+    <footer class="site-footer">
+    <div class="footer-grid">
+        <section class="footer-col contact">
+        <h3 class="footer-heading">San Fernando de Apure Chamber of Commerce</h3>
+        <address class="vcard">
+            <span class="org">San Fernando de Apure Chamber of Commerce</span><br>
+            San Fernando de Apure, Venezuela<br><br>
+            <a href="mailto:info@sfapurechamber.org">info@sfapurechamber.org</a><br>
+            <a href="tel:+582475550123">+58 247‑555‑0123</a>
+        </address>
+        </section>
+
+        <section class="footer-col socials" aria-label="Social links">
+        <ul class="social-list">
+            <li><a href="https://youtu.be/dQw4w9WgXcQ?si=_OKyNq1TU14WEpHp"><img src="./images/Icons/youtube.svg" alt="YouTube"></a></li>
+            <li><a href="#"><img src="./images/Icons/facebook-square.svg" alt="Facebook"></a></li>
+            <li><a href="#"><img src="./images/Icons/instagram-square.svg" alt="Instagram"></a></li>
+        </ul>
+        </section>
+
+        <section class="footer-col meta">
+        <p>WDD231 Class Project</p>
+        <p>© <span id="currentyear"></span> San Fernando de Apure Chamber of Commerce</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+        </section>
+    </div>
+    </footer>
+</body>
+</html>

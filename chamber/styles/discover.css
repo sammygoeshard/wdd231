@@ -1,0 +1,83 @@
+/* =========================
+   DISCOVER LAYOUT
+========================= */
+.discover-main {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.visit-message {
+  background: var(--surface);
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* Grid container */
+.discover-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Cards */
+.discover-card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  display: grid;
+  grid-template-areas:
+    "title"
+    "image"
+    "address"
+    "description"
+    "button";
+  gap: 0.75rem;
+}
+
+.discover-card h2 { grid-area: title; }
+.discover-card figure { grid-area: image; margin: 0; }
+.discover-card address { grid-area: address; font-style: normal; color: var(--muted); }
+.discover-card p { grid-area: description; }
+.discover-card button { grid-area: button; }
+
+.discover-card img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+/* =========================
+   SMALL SCREENS (320–640px)
+========================= */
+@media (max-width: 640px) {
+  .discover-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   MEDIUM SCREENS (641–1024px)
+========================= */
+@media (min-width: 641px) {
+  .discover-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================
+   LARGE SCREENS (1025px+)
+========================= */
+@media (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Desktop-only hover effect */
+  .discover-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  }
+}

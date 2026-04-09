@@ -1,12 +1,8 @@
 /**
  * Responsive, accessible navigation
- * - Toggles mobile menu visibility by switching aria-expanded on the button.
- * - Keeps styles CSS-driven: small.css uses
- *   #menuButton[aria-expanded="true"] ~ nav.site-nav { display: block; }
- * - Closes on link click, Escape key, or outside click.
- * - Highlights the active link by URL.
+ * Toggles mobile menu visibility by switching aria-expanded on the button.
+ * CSS controls display.
  */
-
 (function () {
   'use strict';
 
@@ -14,119 +10,104 @@
   const siteNav = document.getElementById('siteNav');
   const primaryNav = document.getElementById('primaryNav');
 
+
   if (!menuButton || !siteNav || !primaryNav) return;
 
   const navLinks = Array.from(primaryNav.querySelectorAll('a[href]'));
 
-  // Helper: toggle menu state
+  /* Helper: toggle menu state */
   const setMenuState = (open) => {
     menuButton.setAttribute('aria-expanded', String(open));
-    menuButton.setAttribute('aria-label', open ? 'Close main menu' : 'Open main menu');
-
-    // Manage focusability of links for small screens when closed
-    const isSmall = window.matchMedia('(max-width: 47.999rem)').matches;
-    navLinks.forEach((a) => {
-      if (isSmall) {
-        a.tabIndex = open ? 0 : -1;
-      } else {
-        a.tabIndex = 0; // ensure focusable on large screens
-      }
-    });
-
-    // Focus the first link when opened via keyboard
-    if (open) {
-      // Wait a tick for rendering
-      window.requestAnimationFrame(() => {
-        const firstLink = navLinks[0];
-        if (firstLink) firstLink.focus();
-      });
-    }
+    menuButton.setAttribute(
+      'aria-label',
+      open ? 'Close main menu' : 'Open main menu'
+    );
   };
 
-  // Initialize state: closed on small, open (focusable) on large (CSS shows it)
   const init = () => {
-    const isSmall = window.matchMedia('(max-width: 47.999rem)').matches;
-    setMenuState(!isSmall ? false : false); // default closed; CSS in larger.css shows nav without button
-    // On large screens, we keep aria-expanded false but links are focusable via resize handler below
-    handleResize();
+    setMenuState(false);          // always start closed
+    handleResize();               // let CSS + resize logic manage visibility
     highlightActiveLink();
   };
 
-  // Toggle on button click
+  /* Toggle on button click */
   menuButton.addEventListener('click', () => {
     const open = menuButton.getAttribute('aria-expanded') === 'true';
     setMenuState(!open);
   });
 
-  // Close when a nav link is clicked (on mobile)
+  /* Close when a nav link is clicked (mobile only) */
   primaryNav.addEventListener('click', (evt) => {
-    const target = evt.target;
-    if (target && target.closest('a')) {
-      const isSmall = window.matchMedia('(max-width: 47.999rem)').matches;
-      if (isSmall) setMenuState(false);
-    }
+    const link = evt.target.closest('a');
+    if (!link) return;
+
+    const isSmall = window.matchMedia('(max-width: 47.999rem)').matches;
+    if (isSmall) setMenuState(false);
   });
 
-  // Close on Escape key when open
+  /* Close on Escape */
   document.addEventListener('keydown', (evt) => {
-    if (evt.key === 'Escape' || evt.key === 'Esc') {
-      const open = menuButton.getAttribute('aria-expanded') === 'true';
-      if (open) {
+    if (evt.key === 'Escape') {
+      if (menuButton.getAttribute('aria-expanded') === 'true') {
         setMenuState(false);
         menuButton.focus();
       }
     }
   });
 
-  // Close if clicking outside the nav/menu button (mobile only)
+  /* Click outside to close (mobile only) */
   document.addEventListener('click', (evt) => {
     const open = menuButton.getAttribute('aria-expanded') === 'true';
     if (!open) return;
-    const insideToggle = menuButton.contains(evt.target);
-    const insideNav = siteNav.contains(evt.target);
+
     const isSmall = window.matchMedia('(max-width: 47.999rem)').matches;
-    if (isSmall && !insideToggle && !insideNav) {
+    if (
+      isSmall &&
+      !menuButton.contains(evt.target) &&
+      !siteNav.contains(evt.target)
+    ) {
       setMenuState(false);
     }
   });
 
-  // Keep focusability correct across resizes
+  /* Maintain focusability across resizes */
   const handleResize = () => {
     const isSmall = window.matchMedia('(max-width: 47.999rem)').matches;
+
     if (isSmall) {
       const open = menuButton.getAttribute('aria-expanded') === 'true';
-      navLinks.forEach((a) => (a.tabIndex = open ? 0 : -1));
+      navLinks.forEach(a => (a.tabIndex = open ? 0 : -1));
     } else {
-      // Large view: links always focusable
-      navLinks.forEach((a) => (a.tabIndex = 0));
-      // Ensure menu button is visually hidden by CSS but still operable if user tabs—so keep it focusable but not needed
-      menuButton.setAttribute('aria-expanded', 'false');
+      navLinks.forEach(a => (a.tabIndex = 0));
+      setMenuState(false); // desktop nav always visible via CSS
     }
   };
 
   window.addEventListener('resize', handleResize);
 
-  // Active link highlighting based on current URL
-  function highlightActiveLink() {
-    const here = new URL(window.location.href);
-    navLinks.forEach((a) => {
-      try {
-        const url = new URL(a.href, here.origin);
-        const isActive =
-          url.pathname.replace(/\/+$/, '') === here.pathname.replace(/\/+$/, '');
-        if (isActive) {
-          a.setAttribute('aria-current', 'page');
-          a.classList.add('active');
-        } else {
-          a.removeAttribute('aria-current');
-          a.classList.remove('active');
-        }
-      } catch {
-        // ignore malformed hrefs
-      }
-    });
-  }
+function highlightActiveLink() {
+  const currentPath = window.location.pathname;
 
-  // Run
+  navLinks.forEach(link => {
+    const linkUrl = new URL(link.href, window.location.origin);
+
+    // Get filenames only
+    const currentPage = currentPath.endsWith("/")
+      ? "index.html"
+      : currentPath.split("/").pop();
+
+    const linkPage = linkUrl.pathname.split("/").pop();
+
+    if (currentPage === linkPage) {
+      link.classList.add("active");
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.classList.remove("active");
+      link.removeAttribute("aria-current");
+    }
+  });
+}
+
+  /* Run */
   init();
 })();
