@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rosa's Bakery</title>
+  <meta name="description" content=" homepage of Rosa's Bakery">
+  <meta name="author" content="Samuel Jaspe - WDD231 Final Class Project">
+  <!-- Open Graph metadata for social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rosa's Bakery – Fresh Local Pastries">
+  <meta property="og:url" content="https://sammygoeshard.github.io/wdd231/project/index.html">
+  <meta property="og:image" content="https://sammygoeshard.github.io/wdd231/chamber/images/og-index.webp">
+  <meta property="og:description" content="Artisan breads, pastries, and custom orders from Rosa’s Bakery, your local neighborhood bakehouse.">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- icons -->
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+  <!-- scripts -->
+  <script src="scripts/navigation.js" defer></script>
+  <script type="module" src="./scripts/home-featured.js"></script>
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/home.css">
+</head>
+<body class="home">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="branding">
+      <img src="./images/Icons/Rosa's bakery.svg" width="60" height="58"
+          alt="Rosa's Bakery logo">
+    </div>
+
+    <div class="titles">
+      <h1 class="site-title">Rosa's Bakery</h1>
+       <p class="site-eyebrow">estd. 2005</p>
+    </div>
+
+    <button
+      id="menuButton"
+      class="nav-toggle"
+      aria-expanded="false"
+      aria-controls="primaryNav"
+      aria-label="Open main menu">
+      ☰
+    </button>
+
+  <div id="siteNav">
+    <nav id="primaryNav" class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./orders.html">Special Orders</a></li>
+        <li><a href="./discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li aria-current="page">Special Orders</li>
+  </ul>
+</nav>
+
+<main id="main">
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <!-- Use CSS background-image for hero (see styles.css) -->
+      <div class="container hero-inner">
+        <h2 id="hero-title">Welcome to Rosa's Bakery</h2>
+        <p class="hero-tagline">Baked Goods • Local pastries • Local community Products</p>
+          <div class="hero-ctas">
+          <a class="btn" href="orders.html">Place an Order</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Specials -->
+    <section class="featured-specials" aria-labelledby="featured-title">
+      <div class="container">
+        <h2 id="featured-title">Featured Specials</h2>
+
+        <div id="featuredGrid" class="featured-grid">
+          <!-- Featured cards injected via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Hours & Location -->
+    <section class="section section-alt" aria-labelledby="hours-title">
+      <div class="container grid-2">
+        <div>
+          <h5 id="hours-title">Hours &amp; Location</h5>
+          <address class="vcard">
+            <p class="adr">423 Caracas Ave, San Fernando, Apure</p>
+            <p class="tel">Phone: +58 (0412) 314-159</p>
+          </address>
+          <p class="hours">
+            <strong>Mon–Sat:</strong> <time datetime="07:00">7:00</time>–<time datetime="20:00">20:00</time><br />
+            <strong>Closed:</strong> Sunday
+          </p>
+        </div>
+
+        <!-- Map preview  -->
+        <div class="map-preview">
+          <iframe title="Map to Rosa's Bakery" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d306.7474064091653!2d-67.47250752707399!3d7.883564929668718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e7880d5aa1d7495%3A0x986246c18d04d764!2sVGMH%2BF2V%2C%20Av.%20Caracas%2C%20San%20Fernando%20de%20Apure%207001%2C%20Apure!5e0!3m2!1ses-419!2sve!4v1770749281998!5m2!1ses-419!2sve" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+         </iframe>
+      
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+
+      <section class="footer-col contact">
+        <h6 class="footer-heading">Rosa's Bakery</h6>
+        <address class="vcard">
+          <span class="org">Rosa's Bakery</span><br>
+          415 Carabob Av.<br>
+          San Fernando de Apure, Venezuela<br><br>
+          <a href="mailto:info@rosasbakery.com">rosa's_bakery@gmail.com</a><br>
+          <a href="tel:+582475550123">+58 247‑555‑0123</a>
+        </address>
+      </section>
+
+      <section class="footer-col socials" aria-label="Social links">
+        <ul class="social-list">
+          <li><a href="https://youtu.be/dQw4w9WgXcQ?si=_OKyNq1TU14WEpHp"><img src="./images/Icons/tiktok-square.svg" alt="TikTok"></a></li>
+          <li><a href="https://www.facebook.com/"><img src="./images/Icons/facebook-square.svg" alt="Facebook"></a></li>
+          <li><a href="https://www.instagram.com/dulces.de.mama_?igsh=ZTRlaGU2ZmFiNGE3"><img src="./images/Icons/instagram-square.svg" alt="Instagram"></a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col meta">
+        <p>WDD231 Final Class Project</p>
+        <p>© Rosa's Bakery</p>
+        <!-- Required by WDD131: link to references page -->
+        <p><a href="references.html">References</a></p>
+      </section>
+    </div>
+  </footer>
+</html>

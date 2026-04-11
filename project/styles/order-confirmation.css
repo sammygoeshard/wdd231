@@ -1,0 +1,65 @@
+/* =====================================================
+   ORDER CONFIRMATION PAGE
+   ===================================================== */
+main{
+    padding: 1.5rem 2rem;
+}
+
+.confirmation-page {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+}
+
+.confirmation-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.confirmation-card h2 {
+  margin-bottom: 1rem;
+  color: var(--brand-dark);
+}
+
+.confirmation-card p {
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+}
+
+/* Data list */
+.submission-summary {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.submission-summary li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.submission-summary li strong {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.submission-summary li span {
+  color: var(--muted);
+}
+
+/* CTA back */
+.back-home {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  color: var(--brand-dark);
+  text-decoration: none;
+}
+
+.back-home:hover {
+  text-decoration: underline;
+}

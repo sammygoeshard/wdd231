@@ -1,0 +1,144 @@
+{
+  "products": [
+    {
+      "id": "p001",
+      "name": "Chocolate Strawberry Cake",
+      "category": "Cakes",
+      "price": 22.00,
+      "image": "images/discover/chocolate-strawberry.webp",
+      "alt": "Chocolate cake covered in chocolate ganache and fresh strawberries",
+      "description": "A classic cake made from our traditional sweet butter sponge, layered with rich chocolate ganache and finished with fresh strawberries for a balanced sweetness.",
+      "layout": "tall"
+    },
+    {
+      "id": "p002",
+      "name": "Fruit Genoise Sponge Cake",
+      "category": "Cakes",
+      "price": 20.50,
+      "image": "images/discover/genoise-fruit.webp",
+      "alt": "Light genoise sponge cake with fresh seasonal fruits",
+      "description": "A light and airy genoise sponge filled with seasonal fruits and delicate cream, offering a fresh and elegant dessert option.",
+      "layout": "standard"
+    },
+    {
+      "id": "p003",
+      "name": "Custom Celebration Cake",
+      "category": "Custom",
+      "price": 35.00,
+      "image": "images/discover/custom-cake-1.webp",
+      "alt": "Custom celebration cake with personalized decoration",
+      "description": "A fully customizable cake based on our sweet butter sponge recipe, designed for birthdays, anniversaries, and special celebrations.",
+      "layout": "tall"
+    },
+    {
+      "id": "p004",
+      "name": "Custom Designer Cake",
+      "category": "Custom",
+      "price": 38.00,
+      "image": "images/discover/custom-cake-2.webp",
+      "alt": "Designer custom cake with handcrafted details",
+      "description": "An artisan custom cake crafted from our traditional butter sponge, featuring refined decorative elements tailored to each occasion.",
+      "layout": "tall"
+    },
+    {
+      "id": "p005",
+      "name": "Minimalist Floral Cake",
+      "category": "Cakes",
+      "price": 28.00,
+      "image": "images/discover/floral-cake.webp",
+      "alt": "Minimalist cake with floral decoration",
+      "description": "A minimalist cake built on our sweet butter sponge base, decorated with subtle floral elements for a clean and elegant presentation.",
+      "layout": "standard"
+    },
+    {
+      "id": "p006",
+      "name": "Swiss Roll Cake",
+      "category": "Pastries",
+      "price": 14.50,
+      "image": "images/discover/swiss-roll.webp",
+      "alt": "Swiss roll cake filled with cream",
+      "description": "A soft rolled sponge cake filled with smooth cream, prepared using a lighter variation of our traditional recipe.",
+      "layout": "tall"
+    },
+    {
+      "id": "p008",
+      "name": "Cake & Cookies Celebration Cake",
+      "category": "Specialty",
+      "price": 30.00,
+      "image": "images/discover/cake-cookies.webp",
+      "alt": "Cake topped with cookies and sugar paste decoration",
+      "description": "A festive cake combining our sweet butter sponge base with decorative sugar paste and a playful cookie topping.",
+      "layout": "tall"
+    },
+    {
+      "id": "p009",
+      "name": "Angel’s Kiss Tres Leches Cake",
+      "category": "Specialty",
+      "price": 26.00,
+      "image": "images/discover/angels-kiss.webp",
+      "alt": "Tres leches cake layered with flan",
+      "description": "A delicate tres leches cake layered with silky flan, offering a moist texture and balanced sweetness in every bite.",
+      "layout": "standard"
+    },
+    {
+      "id": "p010",
+      "name": "Traditional Panettone",
+      "category": "Seasonal",
+      "price": 18.00,
+      "image": "images/discover/panettone.webp",
+      "alt": "Traditional panettone bread",
+      "description": "A classic panettone prepared with enriched dough, dried fruits, and a slow fermentation process for deep flavor.",
+      "layout": "standard"
+    },
+    {
+      "id": "p011",
+      "name": "Dark Chocolate Cake",
+      "category": "Cakes",
+      "price": 23.50,
+      "image": "images/discover/dark-chocolate.webp",
+      "alt": "Dark chocolate cake with glossy finish",
+      "description": "A refined dark chocolate cake with intense cocoa notes, offering a rich yet smooth dessert experience.",
+      "layout": "tall"
+    },
+    {
+      "id": "p012",
+      "name": "Pineapple Pie",
+      "category": "Pies",
+      "price": 16.00,
+      "image": "images/discover/pineapple-pie.webp",
+      "alt": "pineapple pie",
+      "description": "A traditional pineapple pie featuring a soft filling and lightly sweet crust, finished with Cream.",
+      "layout": "wide"
+    },
+    {
+      "id": "p013",
+      "name": "Oreos and Cup",
+      "category": "desserts",
+      "price": 11.00,
+      "image": "images/discover/oreos-and-cream.webp",
+      "alt": "oreos and cup",
+      "description": "A delightful dessert combining crispy oreos with a creamy cup, perfect for a sweet treat.",
+      "layout": "tall"
+    },
+    {
+      "id": "p014",
+      "name": "Quesillo and brownie cake",
+      "category": "Cakes",
+      "price": 8.00,
+      "image": "images/discover/torta-quesillo.webp",
+      "alt": "quesillo and brownie cake",
+      "description": "A delightful cake combining the creamy texture of quesillo with the rich flavor of brownie, perfect for a sweet treat.",
+      "layout": "tall"
+    },
+    {
+      "id": "p015",
+      "name": "Integral Cacao Biscuit",
+      "category": "desserts",
+      "price": 25.00,
+      "image": "images/discover/integral-cacao-biscuit.webp",
+      "alt": "integral cacao biscuit",
+      "description": "A delightful biscuit made with integral cacao, offering a rich and wholesome treat.",
+      "layout": "tall"
+    }
+  ]
+}

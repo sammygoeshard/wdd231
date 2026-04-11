@@ -1,0 +1,170 @@
+/* ===============================
+   HOME PAGE STYLES (index.html)
+   =============================== */
+
+/* ---------- Hero ---------- */
+.hero {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(161, 140, 140, 0.45),
+      rgba(73, 66, 66, 0.45)
+    ),
+    url("https://images.pexels.com/photos/192933/pexels-photo-192933.jpeg") center / cover no-repeat;
+  color: #ffffff;
+}
+
+.hero-inner {
+  padding: clamp(3rem, 7vw, 6rem) 0;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.hero-tagline {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  opacity: 0.95;
+}
+
+/* ---------- Hero CTA ---------- */
+.hero-ctas {
+  margin-top: 1.5rem;
+}
+
+.hero-ctas .btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  background-color: var(--coffee, #6b4e3d);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 9999px; /* Fully rounded pill shape */
+  transition: 
+    box-shadow 0.25s ease,
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+/* Hover & focus states */
+.hero-ctas .btn:hover,
+.hero-ctas .btn:focus-visible {
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Accessibility: visible focus without hover */
+.hero-ctas .btn:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+
+/* ---------- Featured Specials ---------- */
+.section {
+  padding: 3rem 2rem ;
+  /* this adds padding to the ALL section  */
+}
+
+.section .card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  .section .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64rem) {
+  .section .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ---------- Featured Specials ---------- */
+.featured-specials {
+  padding: 0 2rem;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.featured-card {
+  background-color: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Enforce vertical ratio */
+.featured-image {
+  aspect-ratio: 9 / 16;
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-info {
+  padding: 1rem;
+}
+
+.featured-info h3 {
+  margin-bottom: 0.25rem;
+}
+
+.featured-category {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.featured-price {
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.product-card,
+.featured-card {
+  box-shadow: var(--card-shadow-base);
+  transition:
+    transform var(--card-transition),
+    box-shadow var(--card-transition);
+}
+
+.product-card:hover,
+.featured-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* ---------- Hours & Location ---------- */
+.grid-2 {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 48rem) {
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.map-preview iframe {
+  width: 100%;
+  height: 320px;
+  border-radius: 0.5rem;
+}

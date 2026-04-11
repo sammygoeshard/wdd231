@@ -1,0 +1,293 @@
+:root {
+  --brand: #E6AFC2;
+  --brand-dark: #F08080;
+  --secondary1: #a85816;
+  --secondary2: #9b410d;
+  --bar: #374151;
+  --text: #111827;
+  --muted: #6b7280;
+  --bg: #ffffff;
+  --surface: #f3f4f6;
+  --border: #e5e7eb;
+  --radius: 0.5rem;
+  --space: 0.5rem; /* Aumentado para mejor respiro */
+  --maxw: 1900px;
+  --shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+  --card-shadow-base: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --card-shadow-hover: 0 10px 24px rgba(0, 0, 0, 0.12);
+  --card-transition: 0.25s ease;
+  --font-heading: "Lora", serif;
+  --font-body: "Roboto", system-ui, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-title,
+h1, h2, h3 {
+  font-family: var(--font-heading);
+}
+
+/* =========================
+   HEADER 
+========================= */
+
+.site-header {
+  background-color: var(--brand-dark);
+  color: var(--bg);
+  border-bottom: 1px solid var(--border);
+
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+
+  padding: 1rem 1.25rem;
+
+  /* CRITICAL */
+  flex-wrap: nowrap;
+}
+
+/* Accessibility helpers */
+ .skip-link {
+      color: var(--bg);
+      background-color: var(--brand-dark);
+      list-style: none;
+ }
+    .skip-link:focus {
+      position: static; width: auto; height: auto; margin: 0.5rem;
+      padding: 0.75rem 1rem; background: var(--brand); color: var(--bg);
+      z-index: 1000;
+    }
+
+/* Logo */
+.branding {
+  flex-shrink: 0;
+}
+
+.branding img {
+  width: 80px;
+  height: auto;
+  margin: 0;
+}
+
+/* Titles */
+.titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* tighten eyebrow/title spacing */
+  gap: 0.15rem;
+
+  text-align: left;
+}
+
+/* Remove default margins*/
+.site-eyebrow,
+.site-title {
+  margin: 0;
+}
+
+.site-eyebrow {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.site-title {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.site-nav {
+  display: none; /* Hidden by default, shown when menu is open */
+}
+
+/* Push nav to the far right */
+#siteNav {
+  margin-left: auto;
+}
+
+#menuButton[aria-expanded="true"] ~ #siteNav .site-nav {
+  display: block;
+}
+
+.site-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+}
+
+.site-nav li + li {
+  border-top: 1px solid var(--border);
+}
+
+.site-nav a {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: var(--text);
+  position: relative;
+  font-weight: 500;
+}
+
+/* ===============================
+   MOBILE MENU BUTTON – STYLED
+================================ */
+
+.nav-toggle {
+  background: transparent;
+  border: 2px solid var(--muted);
+  color: var(--bg);
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0.4rem 0.65rem;
+  border-radius: 0.4rem;
+
+  cursor: pointer;
+
+  /* alignment */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* subtle polish */
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.nav-toggle:hover,
+.nav-toggle:focus-visible {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: var(--bg);
+}
+
+/* --- NAVEGACIÓN PRINCIPAL (Header) --- */
+.site-nav a {
+  position: relative; /* Necesario para que el ::after sea relativo al enlace */
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-nav a.is-active {
+  color: var(--secondary2); /* O un color que destaque sobre el fondo rosado */
+  font-weight: 600;
+}
+
+/* El indicador visual para el menú */
+.site-nav a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px; /* Ajusta según el padding de tu header */
+  height: 3px;
+  background-color: var(--secondary2);
+}
+
+/* --- 2. BREADCRUMBS (Main) --- */
+.breadcrumbs {
+  padding: 1rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.breadcrumbs a {
+  color: var(--brand-dark);
+  text-decoration: none;
+}
+
+/* El elemento actual en los breadcrumbs NO debe ser un link o debe verse distinto */
+.breadcrumbs li[aria-current="page"] {
+  color: var(--text);
+  font-weight: bold;
+}
+
+/* FOOTER */
+.site-footer {
+  background: var(--brand-dark);
+  color: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 3rem 1rem;
+  margin-top: auto;
+}
+
+.footer-grid {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  text-align: center;
+}
+
+.social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.social-list img {
+  width: 32px;
+  height: 32px;
+}
+
+
+/* MEDIA QUERIES (ESCRITORIO) */
+@media (min-width: 48rem) {
+ .site-nav {
+    display: block !important;
+  }
+
+  .site-nav ul {
+    border: none;
+    background: transparent;
+    padding: 0;
+    gap: 2rem;
+  }
+
+  .site-nav a {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    padding: 0.25rem 0;
+    color: var(--bg);
+    background: none;
+  }
+
+  .site-nav a:hover,
+  .site-nav a:focus-visible {
+    background: none;
+    color: var(--surface);
+  }
+
+  .site-nav a.is-active {
+      color: var(--brand) !important; /* Color de marca o un color resaltado */
+      font-weight: 700;
+      border-bottom: 3px solid var(--brand);
+    }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+    text-align: left;
+  }
+}

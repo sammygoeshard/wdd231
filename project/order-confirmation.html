@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rosa's Bakery - Order Confirmation</title>
+  <meta name="description" content="Special orders for Rosa's Bakery">
+  <meta name="author" content="Samuel Jaspe - WDD231 Final Class Project">
+  <!-- Open Graph metadata for social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rosa's Bakery – Fresh Local Pastries">
+  <meta property="og:url" content="https://sammygoeshard.github.io/wdd231/project/order-confirmation.html">
+  <meta property="og:image" content="https://sammygoeshard.github.io/wdd231/chamber/images/og-index.webp">
+  <meta property="og:description" content="Artisan breads, pastries, and custom orders from Rosa’s Bakery, your local neighborhood bakehouse.">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- icons -->
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+  <!-- scripts -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="./scripts/thankyou.js" defer></script>
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/order-confirmation.css">
+</head>
+
+<body class="confirmation">
+    <header class="site-header">
+    <div class="branding">
+      <img src="./images/Icons/Rosa's bakery.svg" width="60" height="58"
+          alt="Rosa's Bakery logo">
+    </div>
+
+    <div class="titles">
+      <h1 class="site-title">Rosa's Bakery</h1>
+       <p class="site-eyebrow">estd. 2005</p>
+    </div>
+
+    <button
+      id="menuButton"
+      class="nav-toggle"
+      aria-expanded="false"
+      aria-controls="primaryNav"
+      aria-label="Open main menu">
+      ☰
+    </button>
+
+  <div id="siteNav">
+    <nav id="primaryNav" class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./orders.html">Special Orders</a></li>
+        <li><a href="./discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+  <!-- MAIN -->
+<main class="thankyou-page">
+    <section class="registration-form">
+      <h2>Thank You for Your Application!</h2>
+
+      <p>
+        We’ve received your Order Request. Below is a summary of the
+        information you submitted:
+      </p>
+        <ul class="submission-summary">
+            <li><strong>First Name:</strong> <span id="firstName"></span></li>
+            <li><strong>Last Name:</strong> <span id="lastName"></span></li>
+            <li><strong>Phone:</strong> <span id="phone"></span></li>
+            <li><strong>Address:</strong> <span id="address"></span></li>
+            <li><strong>Cake Type:</strong> <span id="cakeType"></span></li>
+            <li><strong>Decoration:</strong> <span id="decoration"></span></li>
+            <li><strong>Additional Notes:</strong> <span id="details"></span></li>
+        </ul>
+      <a href="./index.html" class="back-home">← Back to Home</a>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-grid">
+
+      <section class="footer-col contact">
+        <h6 class="footer-heading">Rosa's Bakery</h6>
+        <address class="vcard">
+          <span class="org">Rosa's Bakery</span><br>
+          415 Carabob Av.<br>
+          San Fernando de Apure, Venezuela<br><br>
+          <a href="mailto:info@rosasbakery.com">rosa's_bakery@gmail.com</a><br>
+          <a href="tel:+582475550123">+58 247‑555‑0123</a>
+        </address>
+      </section>
+
+      <section class="footer-col socials" aria-label="Social links">
+        <ul class="social-list">
+          <li><a href="https://youtu.be/dQw4w9WgXcQ?si=_OKyNq1TU14WEpHp"><img src="./images/Icons/tiktok-square.svg" alt="TikTok"></a></li>
+          <li><a href="https://www.facebook.com/"><img src="./images/Icons/facebook-square.svg" alt="Facebook"></a></li>
+          <li><a href="https://www.instagram.com/dulces.de.mama_?igsh=ZTRlaGU2ZmFiNGE3"><img src="./images/Icons/instagram-square.svg" alt="Instagram"></a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col meta">
+        <p>WDD231 Final Class Project</p>
+        <p>© Rosa's Bakery</p>
+        <!-- Required by WDD131: link to references page -->
+        <p><a href="references.html">References</a></p>
+      </section>
+    </div>
+  </footer>
+</body>
+</html>

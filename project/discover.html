@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rosa's Bakery - Discover Our Creations</title>
+  <meta name="description" content="Discover the delicious offerings at Rosa's Bakery">
+  <meta name="author" content="Samuel Jaspe - WDD231 Final Class Project">
+  <!-- Open Graph metadata for social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rosa's Bakery – Fresh Local Pastries">
+  <meta property="og:url" content="https://sammygoeshard.github.io/wdd231/project/discover.html">
+  <meta property="og:image" content="https://sammygoeshard.github.io/wdd231/chamber/images/og-index.webp">
+  <meta property="og:description" content="Artisan breads, pastries, and custom orders from Rosa’s Bakery, your local neighborhood bakehouse.">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- icons -->
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+  <!-- scripts -->
+  <script src="/scripts/navigation.js" defer></script>
+  <script src="./scripts/render.js" type="module"></script>
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/discover.css">
+</head>
+
+<body class="discover">
+   <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="branding">
+      <img src="./images/Icons/Rosa's bakery.svg" width="60" height="58"
+          alt="Rosa's Bakery logo">
+    </div>
+
+    <div class="titles">
+      <h1 class="site-title">Rosa's Bakery</h1>
+       <p class="site-eyebrow">estd. 2005</p>
+    </div>
+
+    <button
+      id="menuButton"
+      class="nav-toggle"
+      aria-expanded="false"
+      aria-controls="primaryNav"
+      aria-label="Open main menu">
+      ☰
+    </button>
+
+  <div id="siteNav">
+    <nav id="primaryNav" class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./orders.html">Special Orders</a></li>
+        <li><a href="./discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </div>
+</header> 
+
+<main id="main" class="discover">
+
+  <!-- Page introduction -->
+  <section class="page-intro">
+    <div class="container">
+      <h2>Discover Our Creations</h2>
+      <p class="page-intro-text">
+        Explore our handcrafted cakes and pastries, made with care and traditional recipes.
+      </p>
+    </div>
+  </section>
+
+  <!-- Discover gallery -->
+  <section class="discover-gallery" aria-labelledby="gallery-title">
+    <div class="container">
+
+      <h3 id="gallery-title" class="visually-hidden">
+        Product Gallery
+      </h3>
+
+      <!-- Grid container (items injected dynamically) -->
+      <div id="productsGrid" class="products-grid">
+
+        <!--
+          Product cards will be injected here via JavaScript.
+          Each card will use layout classes such as:
+          - layout-tall
+          - layout-wide
+          - layout-standard
+        -->
+          
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Modal dialog for product details -->
+  <dialog id="productModal" class="product-modal" aria-labelledby="modal-title">
+
+    <button
+      type="button"
+      class="modal-close"
+      aria-label="Close product details">
+      ✕
+    </button>
+
+    <div class="modal-content">
+
+      <!-- Image -->
+      <div class="modal-image-wrapper">
+        <img
+          id="modalImage"
+          src=""
+          alt=""
+          loading="lazy"
+          decoding="async">
+      </div>
+
+      <!-- Text content -->
+      <div class="modal-text">
+        <h4 id="modalTitle"></h4>
+        <p id="modalDescription"></p>
+        <p class="modal-meta">
+          <span id="modalCategory"></span> •
+          <span id="modalPrice"></span>
+        </p>
+      </div>
+
+    </div>
+
+  </dialog>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-grid">
+
+      <section class="footer-col contact">
+        <h5 class="footer-heading">Rosa's Bakery</h5>
+        <address class="vcard">
+          <span class="org">Rosa's Bakery</span><br>
+          415 Carabob Av.<br>
+          San Fernando de Apure, Venezuela<br><br>
+          <a href="mailto:info@rosasbakery.com">rosa's_bakery@gmail.com</a><br>
+          <a href="tel:+582475550123">+58 247‑555‑0123</a>
+        </address>
+      </section>
+
+      <section class="footer-col socials" aria-label="Social links">
+        <ul class="social-list">
+          <li><a href="https://youtu.be/dQw4w9WgXcQ?si=_OKyNq1TU14WEpHp"><img src="./images/Icons/tiktok-square.svg" alt="TikTok"></a></li>
+          <li><a href="https://www.facebook.com/"><img src="./images/Icons/facebook-square.svg" alt="Facebook"></a></li>
+          <li><a href="https://www.instagram.com/dulces.de.mama_?igsh=ZTRlaGU2ZmFiNGE3"><img src="./images/Icons/instagram-square.svg" alt="Instagram"></a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col meta">
+        <p>WDD231 Final Class Project</p>
+        <p>© Rosa's Bakery</p>
+        <!-- Required by WDD131: link to references page -->
+        <p><a href="references.html">References</a></p>
+      </section>
+    </div>
+  </footer>
+</body>
+</html>
