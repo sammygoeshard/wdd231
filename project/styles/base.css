@@ -1,6 +1,6 @@
 :root {
   --brand: #E6AFC2;
-  --brand-dark: #F08080;
+  --brand-dark: #e04848;
   --secondary1: #a85816;
   --secondary2: #9b410d;
   --bar: #374151;
@@ -179,11 +179,6 @@ h1, h2, h3 {
 }
 
 /* --- NAVEGACIÓN PRINCIPAL (Header) --- */
-.site-nav a {
-  position: relative; /* Necesario para que el ::after sea relativo al enlace */
-  color: var(--text);
-  text-decoration: none;
-}
 
 .site-nav a.is-active {
   color: var(--secondary2); /* O un color que destaque sobre el fondo rosado */
