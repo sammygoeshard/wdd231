@@ -10,7 +10,7 @@
       rgba(161, 140, 140, 0.45),
       rgba(73, 66, 66, 0.45)
     ),
-    url("https://images.pexels.com/photos/192933/pexels-photo-192933.jpeg") center / cover no-repeat;
+    url("./images/hero.webp") center / cover no-repeat;
   color: #ffffff;
 }
 
